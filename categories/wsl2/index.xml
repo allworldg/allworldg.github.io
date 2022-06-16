@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wsl2 on Allworldg Blog</title><link>https://hugo-c1e.pages.dev/categories/wsl2/</link><description>Recent content in wsl2 on Allworldg Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 09 Jun 2022 07:36:26 +0800</lastBuildDate><atom:link href="https://hugo-c1e.pages.dev/categories/wsl2/index.xml" rel="self" type="application/rss+xml"/><item><title>wsl2环境搭建</title><link>https://hugo-c1e.pages.dev/dev/build-wsl2/</link><pubDate>Thu, 09 Jun 2022 07:36:26 +0800</pubDate><guid>https://hugo-c1e.pages.dev/dev/build-wsl2/</guid><description>序言 我电脑配置不高，开虚拟机跑linux总觉得太卡。最近才了解到windows早就上了wsl2——一款较为轻量的虚拟机软件。所以本篇博客偏笔记向，存粹记录以便多次使用。
+环境 宿主机windows11 目标：安装基于WSL2的Ubuntu20.04虚拟机以及一些常用软件环境。 WSL2安装 可直接参考Microsoft官网手册，输入命令wsl --install一次性默认安装完毕。不过我本机配置不高，所以自己采用分步安装，以达到自定义存放虚拟机位置的目的。
+启用windows功能 设置-&amp;gt;应用和功能 -&amp;gt;程序和功能 -&amp;gt;启用或关闭windows功能
+启动windows的linux子系统和虚拟机平台，管理员身份打开Powershell，运行命令
+1 2 3 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart 重启电脑让设置生效。
+下载linux内核更新包并且运行更新。
+https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+（可选）如果想默认使用wsl2，则设置命令wsl --set-default-version 2 。如果想同时使用wsl1和wsl2，则可以对下载好不同的linux发行版设置version 。
+1 2 wsl --set-version Ubuntu-18.04 2 wsl --set-version Ubuntu-20.</description></item></channel></rss>
