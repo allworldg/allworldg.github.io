@@ -19,7 +19,7 @@ ruoyi系统在前端主要通过权限字符包含与否来动态显示目录和
 <a href=/categories/ruoyi%E9%A1%B9%E7%9B%AE/>ruoyi项目</a></div><div class=tags><i class="fa fa-tag" aria-hidden=true></i>
 <span class=tag><a href=/tags/ruoyi/>ruoyi</a></span>
 <span class=separator>•</span>
-<span class=tag><a href=/tags/%E6%8E%A5%E5%8F%A3%E6%9D%83%E9%99%90/>接口权限</a></span></div></div></header><div><p>此文章属于ruoyi项目实战系列</p><p>ruoyi系统在前端主要通过权限字符包含与否来动态显示目录和按钮。为了防止通过http请求绕过权限限制，后端接口也需要进行相关权限设计。</p><h2 id=preauthorize使用>@PreAuthorize使用
+<span class=tag><a href=/tags/%E6%8E%A5%E5%8F%A3%E6%9D%83%E9%99%90/>接口权限</a></span></div></div></header><div><p>此文章属于<a href=https://allworldg.xyz/tags/ruoyi/>ruoyi项目实战</a>系列</p><p>ruoyi系统在前端主要通过权限字符包含与否来动态显示目录和按钮。为了防止通过http请求绕过权限限制，后端接口也需要进行相关权限设计。</p><h2 id=preauthorize使用>@PreAuthorize使用
 <a class=heading-link href=#preauthorize%e4%bd%bf%e7%94%a8><i class="fa fa-link" aria-hidden=true></i></a></h2><p>由于对<code>@PreAuthorize</code>原理还不够深入了解，所以此处只粗浅讲解在ruoyi项目是如何应用的。
 在请求调用接口前，被<code>@preAuthorize</code>注解的接口需要首先通过验证。通过注解参数<code>value()</code>返回值<code>true</code>和<code>false</code>来判断是否有权限。</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
 </span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
