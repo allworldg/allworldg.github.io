@@ -75,7 +75,14 @@
 </span></span></span><span style=display:flex><span><span style=color:#09f;font-style:italic></span>      <span style=color:#069;font-weight:700>this</span>.generateConf <span style=color:#555>=</span> data
 </span></span><span style=display:flex><span>      func <span style=color:#555>&amp;&amp;</span> func(data)
 </span></span><span style=display:flex><span>    },
-</span></span></code></pre></td></tr></table></div></div><p><code>this[ exec${titleCase(this.operationType)} ]</code> 拼接出 <code>execCopy</code>，然后调用</p><div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span></span></code></pre></td></tr></table></div></div><p><code>this[ exec${titleCase(this.operationType)} ]</code> 拼接出 <code>execCopy</code>，然后调用</p><div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-JS data-lang=JS><span style=display:flex><span>execCopy(data) {
+</span></span><span style=display:flex><span>      <span style=color:#366>document</span>.getElementById(<span style=color:#c30>&#39;copyNode&#39;</span>).click()
+</span></span><span style=display:flex><span>},
+</span></span></code></pre></td></tr></table></div></div><p>点击该元素。在html部分我们可以看到，该id对应的是一个隐藏的input元素，本身无任何功能。</p><h2 id=关键部分>关键部分
+<a class=heading-link href=#%e5%85%b3%e9%94%ae%e9%83%a8%e5%88%86><i class="fa fa-link" aria-hidden=true></i></a></h2><p>看似点击一个隐藏元素没有任何意义，实际上它只是触发关键的“钥匙”。在mounted()中，ruoyi使用的第三方库ClipboardJS构建了一个对象。clipboardJS是复制粘贴包，所以该部分就是实现的真正原理。</p><div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
@@ -93,23 +100,7 @@
 </span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
 </span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
 </span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-JS data-lang=JS><span style=display:flex><span>execCopy(data) {
-</span></span><span style=display:flex><span>      <span style=color:#366>document</span>.getElementById(<span style=color:#c30>&#39;copyNode&#39;</span>).click()
-</span></span><span style=display:flex><span>},<span style=color:#c30>```
-</span></span></span><span style=display:flex><span><span style=color:#c30>点击该元素。在html部分我们可以看到，该id对应的是一个隐藏的input元素，本身无任何功能。
-</span></span></span><span style=display:flex><span><span style=color:#c30>
-</span></span></span><span style=display:flex><span><span style=color:#c30>## 关键部分
-</span></span></span><span style=display:flex><span><span style=color:#c30>看似点击一个隐藏元素没有任何意义，实际上它只是触发关键的“钥匙”。在mounted()中，ruoyi使用的第三方库ClipboardJS构建了一个对象。clipboardJS是复制粘贴包，所以该部分就是实现的真正原理。
-</span></span></span><span style=display:flex><span><span style=color:#c30>```</span>JavaScript
-</span></span><span style=display:flex><span>  mounted() {
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-JavaScript data-lang=JavaScript><span style=display:flex><span>  mounted() {
 </span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>const</span> clipboard <span style=color:#555>=</span> <span style=color:#069;font-weight:700>new</span> ClipboardJS(<span style=color:#c30>&#39;#copyNode&#39;</span>, {<span style=color:#09f;font-style:italic>//当点击 id=copyNode的元素时，会触发复制
 </span></span></span><span style=display:flex><span><span style=color:#09f;font-style:italic></span>      text<span style=color:#555>:</span> trigger =&gt; {
 </span></span><span style=display:flex><span>        <span style=color:#069;font-weight:700>const</span> codeStr <span style=color:#555>=</span> <span style=color:#069;font-weight:700>this</span>.generateCode()<span style=color:#09f;font-style:italic>//产生页面代码的关键方法
