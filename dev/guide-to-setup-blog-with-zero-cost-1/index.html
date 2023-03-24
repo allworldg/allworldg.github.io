@@ -133,7 +133,8 @@
 </span></span><span style=display:flex><span>          publish_dir<span style=color:#a00;background-color:#faa>:</span> .<span style=color:#a00;background-color:#faa>/</span>public
 </span></span></code></pre></td></tr></table></div></div><p>``</p></li><li><p>注意到配置文件中有一个<code>deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}</code>，我们需要创建公私钥分别放在两个仓库中才能实现action推送。</p><p>输入命令<code>ssh-keygen -f actions-deploy-key</code>，然后进入<strong>C:\Users\username.ssh</strong>,将<strong>actions-deploy-key私钥(非publisher类型)</strong> 文件内容放入a仓库的 settings->Deploy keys , 同理将 公钥(同名称,pulisher类型文件) 内容放入b仓库相同位置。</p></li></ol></li><li><p>创建完成后，每次推送代码仓库a，代码仓库b就能同步更新，然后输入自己博客平台域名即可!<img src=https://img.allworldg.xyz/2022/05/4a6a87f1bdc187e99d53dab79f667810.png alt></p></li></ol><h2 id=后续>后续
 <a class=heading-link href=#%e5%90%8e%e7%bb%ad><i class="fa fa-link" aria-hidden=true></i></a></h2><p>简单好搭建博客后，对于博客其他优化以及功能问题，例如：图床挑选，cdn加速，seo优化，评论功能，广告系统等等在之后慢慢实现，同时我也会同步更新相关文章。当然，最重要地还是勤写博客，做好总结。<a href=https://allworldg.xyz/>allworldg：菜鸟小白的个人空间</a></p></div><footer><script src=https://utteranc.es/client.js repo=allworldg/hugo issue-term=pathname theme=github-light crossorigin=anonymous async></script></footer></article></section></div><footer class=footer><section class=container>©
-2022
+2022 -
+2023
 Allworldg
 ·
 技术支持 <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.</section></footer></main><script src=/js/coder.min.8fb86376a16e684af472a329aef502dbebcfab65ce264e9750d144912947c602.js integrity="sha256-j7hjdqFuaEr0cqMprvUC2+vPq2XOJk6XUNFEkSlHxgI="></script></body></html>
