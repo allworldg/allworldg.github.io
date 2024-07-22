@@ -1,0 +1,104 @@
+{
+  "main": {
+    "id": "86612333cde75f61",
+    "type": "split",
+    "children": [
+      {
+        "id": "aced3b601a467bce",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "src/content/blog/move-to-astro.md",
+            "mode": "source",
+            "backlinks": false,
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "795009b559084a23",
+    "type": "split",
+    "children": [
+      {
+        "id": "e4d36885218ea9b8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ea82b9b410751e79",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "5c14798ca695d7a6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 173.00743865966797
+  },
+  "right": {
+    "id": "e8d41a0b4a720e91",
+    "type": "split",
+    "children": [
+      {
+        "id": "06d6b895d21219fc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "26aacd68af61e3ae",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "src/content/blog/move-to-astro.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "aced3b601a467bce",
+  "lastOpenFiles": [
+    "src/content/blog/move-to-astro.md",
+    "src/content/blog/example.md",
+    "public/example.png",
+    "src/content/pages/terms.md",
+    "src/content/pages/contact.md",
+    "src/content/pages/about.md",
+    "content/dev/guide-to-setup-blog-with-zero-cost-2/index.md",
+    "content/dev/guide-to-setup-blog-with-zero-cost-1/index.md",
+    "content/essay/patient-and-English.md",
+    "content/learn/ruoyi-learn-1/images/Pasted image 20220620205549.png"
+  ]
+}
