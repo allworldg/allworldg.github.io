@@ -6,7 +6,7 @@ tags:
   - Guide
 # seo:
 # image:
-#   src: '/post-1.jpg'
+#   src: '/post-11.jpg'
 #   alt: A person standing at the window
 ---
 
