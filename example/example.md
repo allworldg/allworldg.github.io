@@ -10,4 +10,3 @@ tags:
 #   alt: A person standing at the window
 ---
 
-**Note:** example for create blog

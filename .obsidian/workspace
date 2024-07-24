@@ -7,13 +7,8 @@
         "id": "aced3b601a467bce",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "src/content/blog/move-to-astro.md",
-            "mode": "source",
-            "backlinks": false,
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -70,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/content/blog/move-to-astro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -90,15 +84,15 @@
   },
   "active": "aced3b601a467bce",
   "lastOpenFiles": [
+    "src/content/blog/test.md",
     "src/content/blog/move-to-astro.md",
-    "src/content/blog/example.md",
+    "Untitled.md",
+    "example/example.md",
     "public/example.png",
     "src/content/pages/terms.md",
     "src/content/pages/contact.md",
     "src/content/pages/about.md",
     "content/dev/guide-to-setup-blog-with-zero-cost-2/index.md",
-    "content/dev/guide-to-setup-blog-with-zero-cost-1/index.md",
-    "content/essay/patient-and-English.md",
-    "content/learn/ruoyi-learn-1/images/Pasted image 20220620205549.png"
+    "content/dev/guide-to-setup-blog-with-zero-cost-1/index.md"
   ]
 }
