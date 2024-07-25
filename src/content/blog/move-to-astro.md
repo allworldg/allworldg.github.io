@@ -1,7 +1,7 @@
 ---
 title: Hugo迁移到Astro
 excerpt: 博客没写几篇，平台倒是一直再换。
-publishDate: 'Aug 5 2023'
+publishDate: 'July 25 2024'
 tags:
   - Guide
 ---
