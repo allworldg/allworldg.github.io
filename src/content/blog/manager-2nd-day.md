@@ -1,7 +1,7 @@
 ---
 title: 软件实施第二天
 excerpt: excerpt
-publishDate: '2024-8-18'
+publishDate: 2024-8-6
 tags:
   - diary
 # seo:
