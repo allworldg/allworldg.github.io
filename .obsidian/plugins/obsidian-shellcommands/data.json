@@ -13,7 +13,7 @@
   "shell_commands": {
     "0": {
       "platform_specific_commands": {
-        "default": "git add . && git commit -m \"{{_message}}\" && git push origin master ",
+        "default": "git add . && git commit -m \"{{_message}}\" && git push github master ",
         "darwin": "gitadd ."
       },
       "shells": {},
@@ -56,7 +56,7 @@
     },
     "2": {
       "platform_specific_commands": {
-        "default": "Hugo new {{_titlename}}.md"
+        "default": ""
       },
       "shells": {},
       "alias": "",
@@ -76,6 +76,24 @@
           "prompt_id": "b16cpbgn4h"
         }
       ],
+      "variable_default_values": {}
+    },
+    "3": {
+      "platform_specific_commands": {
+        "default": ""
+      },
+      "shells": {},
+      "alias": "",
+      "confirm_execution": false,
+      "ignore_error_codes": [],
+      "output_channels": {
+        "stdout": "ignore",
+        "stderr": "notification"
+      },
+      "output_channel_order": "stdout-first",
+      "events": {},
+      "command_palette_availability": "enabled",
+      "preactions": [],
       "variable_default_values": {}
     }
   },

@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "src/content/blog/manager-2nd-day.md",
+            "file": "src/content/blog/manager-2nd-week.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -70,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/content/blog/manager-2nd-day.md",
+                "file": "src/content/blog/manager-2nd-week.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -90,15 +90,15 @@
   },
   "active": "aced3b601a467bce",
   "lastOpenFiles": [
+    "src/content/blog/manager-2nd-week.md",
     "src/content/blog/manager-2nd-day.md",
+    "src/content/blog/Untitled.md",
+    "example/example.md",
     "src/content/blog/move-to-astro.md",
     "src/content/blog/write-simple-1.md",
     "src/content/blog/test.md",
     "Untitled.md",
-    "example/example.md",
     "public/example.png",
-    "src/content/pages/terms.md",
-    "src/content/pages/contact.md",
-    "src/content/pages/about.md"
+    "src/content/pages/terms.md"
   ]
 }

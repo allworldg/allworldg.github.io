@@ -1,7 +1,7 @@
 ---
 title: example for create blog
 excerpt: excerpt
-publishDate: 'Aug 5 2023'
+publishDate: <% tp.date.now() %>
 tags:
   - Guide
 # seo:
