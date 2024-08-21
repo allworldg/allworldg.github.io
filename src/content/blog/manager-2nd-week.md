@@ -1,6 +1,6 @@
 ---
 title: 软件实施试用期第二周
-excerpt: excerpt
+excerpt: 学习：主要是观看仓库各个职责的保管员工作流程，操作系统的方式。
 publishDate: 2024-08-18
 tags:
   - Guide

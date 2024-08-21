@@ -1,6 +1,6 @@
 ---
 title: 软件实施第二天
-excerpt: excerpt
+excerpt: 试用经历
 publishDate: 2024-8-6
 tags:
   - diary
