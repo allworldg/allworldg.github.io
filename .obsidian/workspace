@@ -91,14 +91,14 @@
   "active": "aced3b601a467bce",
   "lastOpenFiles": [
     "src/content/blog/add-picture.md",
-    "src/content/blog/manager-2nd-day.md",
-    "public/add-picture.png",
+    "src/content/blog/soft-manager-1.md",
     "src/content/blog/manager-2nd-week.md",
+    "src/content/blog/manager-2nd-day.md",
+    "src/content/blog/move-to-astro.md",
+    "public/add-picture.png",
     "public/manager-2nd-day.jpg",
     "public/manager-2nd-day-1.jpg",
-    "src/content/blog/move-to-astro.md",
     "src/content/blog/write-simple-1.md",
-    "example/example.md",
-    "src/content/blog/test.md"
+    "example/example.md"
   ]
 }
