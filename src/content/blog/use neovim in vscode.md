@@ -1,5 +1,5 @@
 ---
-title: title
+title: 结合使用VSCode和Neovim
 excerpt: 结合neovim和vscode
 publishDate: 2024-11-10
 tags:
