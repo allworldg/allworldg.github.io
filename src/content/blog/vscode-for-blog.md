@@ -23,11 +23,14 @@ VSCode有个插件[Paste Image](https://marketplace.visualstudio.com/items?itemN
 ```Json
   "pasteImage.defaultName": "${currentFileName}-${HH-mm-ss}",
   "pasteImage.basePath": "${projectRoot}",
+  "pasteImage.prefix": "/",
   "pasteImage.path": "${projectRoot}/public/${currentFileName}",
 ```
 
 ## 模板
+
 VSCode本身支持Snippet，所以可以用这个功能来实现快速生成元数据。在我的Blog项目文件夹下的`.vscode`目录下新建`xx.code-snippets`,这个文件的作用是该文件里snippet只会作用于本文件夹。接下来在文件里面添加相关`Snippet`
+
 ```Json
 {
     "template": {
@@ -65,7 +68,3 @@ VSCode本身支持Snippet，所以可以用这个功能来实现快速生成元�
 ```
 
 之前一直追求写博客时“应该”需要的功能，比如所见即所得，可拖动块，支持图片上传存储桶等。如今我觉得只要能让我最平滑快速的进入写博客的状态就行，所以写下了这篇简单配置的水文。之前配置的Obsidian也不算复杂，功能我觉得依旧好用，并且优点是所有的插件和配置都是和文章在一个文件夹，相当于完全不依赖于网络，也是很不错的。也许以后我又会切换回去。
-
-
-
-
