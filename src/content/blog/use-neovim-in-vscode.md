@@ -23,3 +23,20 @@ tags:
 所以我的目的就很明确了：以VSCode作为编辑前端，主要用于界面的显示和编辑，同时还能继续享受VSCode各类插件以及LSP。而Neovim则作为编辑的后端，尽可能只配置基础功能和自定义快捷键，不在配置各种复杂插件，从而简化配置，减少冲突和性能损失。最后分享我的[配置](https://github.com/allworldg/nvim/tree)。
 
 现在这个模式应该最契合我的日常工作流，可以同时享受VSCode和Neovim各自的优点，并且方便维护我的配置。或许在以后的空闲时间里，我会继续回去尝试折腾Neovim。
+
+## 更新
+vscode-neovim插件的`<c-u>,<c-d>`是用VSCode实现的，我使用起来很难受。好在看了github上的讨论，对VSCode的KeyBoard Shortcuts(json)进行添加以下配置
+```json
+  {
+    "command": "vscode-neovim.send",
+    "key": "ctrl+d",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": "<C-d>"
+  },
+  {
+    "command": "vscode-neovim.send",
+    "key": "ctrl+u",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": "<C-u>"
+  }
+```
