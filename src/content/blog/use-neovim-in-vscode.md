@@ -25,7 +25,9 @@ tags:
 现在这个模式应该最契合我的日常工作流，可以同时享受VSCode和Neovim各自的优点，并且方便维护我的配置。或许在以后的空闲时间里，我会继续回去尝试折腾Neovim。
 
 ## 更新
+
 vscode-neovim插件的`<c-u>,<c-d>`是用VSCode实现的，我使用起来很难受。好在看了github上的讨论，对VSCode的KeyBoard Shortcuts(json)进行添加以下配置
+
 ```json
   {
     "command": "vscode-neovim.send",
