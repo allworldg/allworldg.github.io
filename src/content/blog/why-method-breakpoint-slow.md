@@ -3,7 +3,7 @@ title: Why Method Breakpoint Slow
 excerpt: 一些IDE提供“方法断点”的功能，可以让断点调试看起来非常简洁，然而在调试过程中我们会发现调试反应时间很长，调试器的性能大大降低。在本文中，我会简单解释方法断点的实现原理，以及为何导致性能变差的原因。
 publishDate: 2022-10-21T11:37:51+8:00
 tags:
-	- Guide
+  - Guide
 # seo:
 # image:
 #   src: '/post-11.jpg'
@@ -28,7 +28,7 @@ JPDA是JAVA调试框架，主要用于debugger(调试器)和debuggee(调试程�
 在编辑器打一个断点，往往内部会进行三步
 1. 允许断点事件：VM允许debugger激活各种事件。font-end调用 `SetEventNotificationMode()` 方法启用 `can_generate_breakpoint_events`  ，当运行到断点处，VM会触发事件通过debugger链返回值。
 2. 注册断点：通过 `SetBreakpoint` 方法设置断点，当线程运行到断点处，VM会将所有active线程暂停，并且触发断点事件。
-	```Java
+	```java
 	SetBreakpoint(jvmtiEnv* env,
 
 	              jmethodID method, //注意一下此变量，下文会再次提到。
@@ -41,7 +41,7 @@ JPDA是JAVA调试框架，主要用于debugger(调试器)和debuggee(调试程�
 
 debugger调用上文说的 `SetEventNotificationMode()`，
 启用 `can_generate_method_entry_events` 和 `can_generate_method_exit_events`，当VM运行进入和退出方法时，会向debugger发送 方法进入退出事件：
-```Java
+```java
 MethodEntry(....,JmethodID method)
 MethodExit(....,JmethodID method)
 ```
