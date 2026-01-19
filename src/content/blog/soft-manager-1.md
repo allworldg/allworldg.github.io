@@ -1,6 +1,6 @@
 ---
 title: 离开柳州，软件测试
-excerpt: excerpt
+excerpt: 从柳州滚蛋了，开始加入到面试岗位的所在地点工作。
 publishDate: 2024-09-13
 tags:
   - diary

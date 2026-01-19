@@ -1,10 +1,10 @@
 ---
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
-import BaseHead from '../components/BaseHead.astro';
+import MetaHead from '../components/MetaHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
-import Header from '../components/Header.astro';
+import Navbar from '../components/Navbar.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -13,7 +13,7 @@ const { title, excerpt, publishDate, updatedDate, heroImage } = Astro.props;
 
 <html lang="en">
     <head>
-        <BaseHead title={title} description={excerpt} />
+        <MetaHead title={title} description={excerpt} />
         <style>
             main {
                 width: calc(100% - 2em);
@@ -56,7 +56,7 @@ const { title, excerpt, publishDate, updatedDate, heroImage } = Astro.props;
     </head>
 
     <body>
-        <Header />
+        <Navbar />
         <main>
             <article>
                 <div class="hero-image">
