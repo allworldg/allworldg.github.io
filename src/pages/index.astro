@@ -2,10 +2,14 @@
 import MetaHead from '../components/MetaHead.astro';
 import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../constants';
+import Pagination from '../components/pagination.astro';
+import { PAGE_SIZE, SITE_DESCRIPTION, SITE_TITLE, PAGE_URL } from '../constants';
 import { getCollection } from 'astro:content';
 
-const blogs = await getCollection('blog');
+const data = await getCollection('blog');
+const blogs = data.slice(0, 5);
+const hasNext = data.length > 5;
+const totalPage = Math.ceil(data.length / PAGE_SIZE);
 ---
 
 <!doctype html>
@@ -27,10 +31,19 @@ const blogs = await getCollection('blog');
                             <a class="text-base-green font-bold">{blog.data.title}</a>
                         </h2>
                         <p class="text-[#7f8c9b] font-merriweather text-xs mt-4 my-2">{blog.data.publishDate}</p>
-                        <div class="text-[#34495e] text-sm">{blog.data.excerpt}</div>
+                        <div class="text-base-gray text-sm">{blog.data.excerpt}</div>
                     </article>
                 ))
             }
+            <Pagination
+                class="mt-10"
+                hasPrev={false}
+                hasNext={hasNext}
+                prevUrl=""
+                nextUrl={PAGE_URL + '/2'}
+                currentPage={1}
+                totalPage={totalPage}
+            />
         </main>
         <Footer />
     </body>

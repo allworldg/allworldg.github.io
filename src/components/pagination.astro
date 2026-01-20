@@ -1,0 +1,24 @@
+---
+interface Props {
+    hasPrev: boolean;
+    hasNext: boolean;
+    prevUrl: string;
+    nextUrl: string;
+    currentPage: number;
+    totalPage: number;
+    class?: string;
+}
+const { hasPrev, hasNext, prevUrl, nextUrl, currentPage, totalPage, class: classname, ...rest } = Astro.props;
+---
+
+<div class:list={['flex', 'justify-between',classname,{...rest}]}>
+    <a href={prevUrl} class:list={[' text-base-green', hasPrev ? 'visible' : 'invisible']}>
+        <span class="text-black text-center">←</span>
+        Prev
+    </a>
+    <p class="text-base-gray font-bold">{currentPage} / {totalPage}</p>
+    <a href={nextUrl} class:list={['text-base-green', hasNext ? 'visible' : 'invisible']}>
+        Next
+        <span class="text-black text-center">→</span>
+    </a>
+</div>

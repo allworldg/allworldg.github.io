@@ -3,4 +3,8 @@
 
 export const SITE_TITLE = 'Allworldg';
 export const SITE_DESCRIPTION = 'Welcome to my website!';
-export default {} as const;
+export const PAGE_URL = '/page'
+export const PAGE_SIZE = 5;
+export default {
+
+} as const;

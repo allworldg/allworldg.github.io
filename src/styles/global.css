@@ -11,5 +11,7 @@
 
 @theme {
     --color-base-green: #209460;
+    --color-base-gray: #34495e;
     --font-merriweather: 'Merriweather', 'sans-serif';
+
 }

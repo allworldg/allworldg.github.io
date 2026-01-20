@@ -1,0 +1,34 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import { SITE_TITLE, SITE_DESCRIPTION, PAGE_SIZE } from '../../constants';
+import MetaHead from '../../components/MetaHead.astro';
+import Navbar from '../../components/Navbar.astro';
+
+export const getStaticPaths = (async ({ paginate }) => {
+    // Generate pages from our array of astronauts, with 2 to a page
+    const blogs = await getCollection('blog');
+    return paginate(blogs, { pageSize: PAGE_SIZE });
+}) satisfies GetStaticPaths;
+const { page } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <MetaHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    </head>
+    <body>
+        <Navbar />
+        {
+            page.data.map((e) => {
+                let { title, excerpt, publishDate } = e.data;
+                return( 
+                <h2>{title}</h2>
+                <p>{publishDate}</p>
+                <p>{excerpt}</p>
+                );
+            })
+        }
+    </body>
+</html>
