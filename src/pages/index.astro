@@ -3,7 +3,7 @@ import MetaHead from '../components/MetaHead.astro';
 import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar.astro';
 import Pagination from '../components/pagination.astro';
-import { PAGE_SIZE, SITE_DESCRIPTION, SITE_TITLE, PAGE_URL } from '../constants';
+import { PAGE_SIZE, SITE_DESCRIPTION, SITE_TITLE, PAGE_URL, BLOG_URL } from '../constants';
 import { getCollection } from 'astro:content';
 
 const data = await getCollection('blog');
@@ -28,7 +28,7 @@ const totalPage = Math.ceil(data.length / PAGE_SIZE);
                 blogs.map((blog) => (
                     <article class="mt-8 pb-4">
                         <h2 class="text-lg">
-                            <a class="text-base-green font-bold">{blog.data.title}</a>
+                            <a class="text-base-green font-bold" href={BLOG_URL+"/"+blog.id}>{blog.data.title}</a>
                         </h2>
                         <p class="text-[#7f8c9b] font-merriweather text-xs mt-4 my-2">{blog.data.publishDate}</p>
                         <div class="text-base-gray text-sm">{blog.data.excerpt}</div>

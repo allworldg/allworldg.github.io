@@ -1,7 +1,7 @@
 ---
 import type { GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
-import { SITE_TITLE, SITE_DESCRIPTION, PAGE_SIZE } from '../../constants';
+import { SITE_TITLE, SITE_DESCRIPTION, PAGE_SIZE, BLOG_URL } from '../../constants';
 import MetaHead from '../../components/MetaHead.astro';
 import Navbar from '../../components/Navbar.astro';
 import Pagination from '../../components/pagination.astro';
@@ -33,7 +33,7 @@ const { page } = Astro.props;
                     return (
                         <article class="mt-8 pb-4">
                             <h2 class="text-lg">
-                                <a class="text-base-green font-bold">{title}</a>
+                                <a class="text-base-green font-bold" href={BLOG_URL+"/"+e.id}>{title}</a>
                             </h2>
                             <p class="text-[#7f8c9b] font-merriweather text-xs mt-4 my-2">{publishDate}</p>
                             <div class="text-base-gray text-sm">{excerpt}</div>
