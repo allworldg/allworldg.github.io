@@ -4,6 +4,9 @@ import { getCollection } from 'astro:content';
 import { SITE_TITLE, SITE_DESCRIPTION, PAGE_SIZE } from '../../constants';
 import MetaHead from '../../components/MetaHead.astro';
 import Navbar from '../../components/Navbar.astro';
+import Pagination from '../../components/pagination.astro';
+import Footer from '../../components/Footer.astro';
+import { undefined } from 'astro:schema';
 
 export const getStaticPaths = (async ({ paginate }) => {
     // Generate pages from our array of astronauts, with 2 to a page
@@ -20,15 +23,34 @@ const { page } = Astro.props;
     </head>
     <body>
         <Navbar />
-        {
-            page.data.map((e) => {
-                let { title, excerpt, publishDate } = e.data;
-                return( 
-                <h2>{title}</h2>
-                <p>{publishDate}</p>
-                <p>{excerpt}</p>
-                );
-            })
-        }
+        <main class="max-w-[780px] h-full mx-auto pt-14">
+            <div class="mt-4">
+                <h3 class="font-bold text-xl">当前第{page.currentPage}页，共{page.lastPage}页</h3>
+            </div>
+            {
+                page.data.map((e) => {
+                    let { title, excerpt, publishDate } = e.data;
+                    return (
+                        <article class="mt-8 pb-4">
+                            <h2 class="text-lg">
+                                <a class="text-base-green font-bold">{title}</a>
+                            </h2>
+                            <p class="text-[#7f8c9b] font-merriweather text-xs mt-4 my-2">{publishDate}</p>
+                            <div class="text-base-gray text-sm">{excerpt}</div>
+                        </article>
+                    );
+                })
+            }
+            <Pagination
+                class="mt-10"
+                hasPrev={page.url.prev?true:false}
+                hasNext={page.url.next?true:false}
+                prevUrl={page.url.prev}
+                nextUrl={page.url.next}
+                currentPage={page.currentPage}
+                totalPage={page.lastPage}
+            />
+        </main>
+        <Footer></Footer>
     </body>
 </html>
