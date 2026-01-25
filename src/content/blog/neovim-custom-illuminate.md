@@ -1,7 +1,7 @@
 ---
 title: custom neovim illuminate (highlight lsp reference)
 excerpt: short description
-publishDate: 2025-01-21T19:45:23+8:00
+publishDate: 2025-01-21T19:45:23+08:00
 tags:
   - Guide
 # seo:

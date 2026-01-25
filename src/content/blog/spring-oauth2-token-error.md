@@ -1,7 +1,7 @@
 ---
 title: SpringSecurity CSRF传入正确相同的token无法登陆问题
 excerpt: 前端header传入对应正确的token，但是后端依旧验证失败，返回403 error。原因为SpringSecurity5.8及以上的版本默认使用了XorCsrfTokenRequestAttributeHandler。
-publishDate: 2025-02-11T09:42:56+8:00
+publishDate: 2025-02-11T09:42:56+08:00
 tags:
   - Guide
   - SpringSecurity

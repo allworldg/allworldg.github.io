@@ -1,7 +1,7 @@
 ---
 title: I'm a loser
 excerpt: short description
-publishDate: 2025-11-22T22:51:23+8:00
+publishDate: 2025-11-22T22:51:23+08:00
 tags:
   - Guide
 # seo:

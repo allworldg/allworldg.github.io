@@ -5,8 +5,13 @@ import Navbar from '../components/Navbar.astro';
 import Pagination from '../components/pagination.astro';
 import { PAGE_SIZE, SITE_DESCRIPTION, SITE_TITLE, PAGE_URL, BLOG_URL } from '../constants';
 import { getCollection } from 'astro:content';
+// import { MarkdownHeading } from 'astro';
 
-const data = await getCollection('blog');
+
+
+const data = ( await getCollection('blog') ).sort((a,b)=>{
+  return b.data.publishDate.getTime()-a.data.publishDate.getTime()
+});
 const blogs = data.slice(0, 5);
 const hasNext = data.length > 5;
 const totalPage = Math.ceil(data.length / PAGE_SIZE);
@@ -19,7 +24,7 @@ const totalPage = Math.ceil(data.length / PAGE_SIZE);
     </head>
     <body>
         <Navbar />
-        <main class="max-w-[780px] h-full mx-auto pt-14">
+        <main class="max-w-[780px] h-full mx-auto pt-14 ">
             <h2 class="text-center text-2xl">If today were the last day of my life</h2>
             <div class="mt-4">
                 <h3 class="font-bold">最近更新:</h3>

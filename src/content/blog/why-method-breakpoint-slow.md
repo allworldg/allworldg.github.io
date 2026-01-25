@@ -1,7 +1,7 @@
 ---
 title: Why Method Breakpoint Slow
 excerpt: 一些IDE提供“方法断点”的功能，可以让断点调试看起来非常简洁，然而在调试过程中我们会发现调试反应时间很长，调试器的性能大大降低。在本文中，我会简单解释方法断点的实现原理，以及为何导致性能变差的原因。
-publishDate: 2022-10-21T11:37:51+8:00
+publishDate: 2022-10-21T11:37:51+08:00
 tags:
   - Guide
 # seo:
@@ -45,6 +45,7 @@ debugger调用上文说的 `SetEventNotificationMode()`，
 MethodEntry(....,JmethodID method)
 MethodExit(....,JmethodID method)
 ```
+
 断点实现流程：
 1. IDE将断点添加到编辑器内置维护的一个断点list里。
 2. debugger调用上文说的SetEventNotificationMode(),启用entry events和exit events，当VM运行代码进入和退出方法时，会向debugger发送事件。

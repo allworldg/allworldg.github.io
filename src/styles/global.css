@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@plugin "@tailwindcss/typography";
 
 @font-face {
     font-family: 'Merriweather';
@@ -13,5 +14,24 @@
     --color-base-green: #209460;
     --color-base-gray: #34495e;
     --font-merriweather: 'Merriweather', 'sans-serif';
+}
 
+@layer base {
+    .app-prose {
+        h2 {
+            @apply text-black text-2xl my-5;
+        }
+        h3 {
+            @apply text-black text-xl my-5;
+        }
+        a {
+            @apply text-base-green;
+        }
+        p {
+            @apply mt-0 mb-[20px];
+        }
+        a {
+          @apply no-underline text-base-green
+        }
+    }
 }

@@ -1,7 +1,7 @@
 ---
 title: 个人软件清单
 excerpt: short description
-publishDate: 2025-05-15T22:02:13+8:00
+publishDate: 2025-05-15T22:02:13+08:00
 tags:
   - essay
 # seo:

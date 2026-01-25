@@ -1,7 +1,7 @@
 ---
 title: element-plus基础学习一
 excerpt: 比较浅的学习一下element-plus的组件是如何实现的
-publishDate: 2024-12-09T22:31:36+8:00
+publishDate: 2024-12-09T22:31:36+08:00
 tags:
   - Guide
   - Element-plus
