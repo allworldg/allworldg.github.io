@@ -42,7 +42,7 @@ const { Content } = await render(blog);
                     <h1 class="text-white text-3xl font-bold text-shadow-[0_0_40px_#34495e]">{title}</h1>
                     <time class="mt-5 text-white font-merriweather text-sm">{DateFormat(publishDate)}</time>
                 </header>
-                <div class="app-prose mx-auto py-6 max-w-2xl text-justify overflow-auto">
+                <div class="app-prose mx-auto py-6 max-w-2xl overflow-auto text-justify hyphens-auto">
                     <Content />
                 </div>
                 <Comment />

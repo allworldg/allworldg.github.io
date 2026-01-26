@@ -54,7 +54,7 @@ public final class CsrfFilter extends OncePerRequestFilter {
 ```
 
 1. 首先之所以会打印`Invalid CSRF token found for xxx` ，是因为满足了`if (!equalsConstantTime(csrfToken.getToken(), actualToken))`的条件，随后检查发现`csrfToken.getToken()`的值正常，为Cookie里的XSRF-TOKEN。 异常的是`actualToken` 为空。
-2. 所以进入上一行`String actualToken = this.requestHandler.resolveCsrfTokenValue(request, csrfToken);`的`resolveCsrfTokenValue` 方法中检查。这里注意的是，在默认配置下，这里的`requesthandler` 为 `XorCsrfTokenRequestAttributeHandler` ，所以需要进入到这个类查看该方法的实现。
+2. 所以进入上一行 `String actualToken = this.requestHandler.resolveCsrfTokenValue(request, csrfToken);` 的`resolveCsrfTokenValue` 方法中检查。这里注意的是，在默认配置下，这里的`requesthandler` 为 `XorCsrfTokenRequestAttributeHandler` ，所以需要进入到这个类查看该方法的实现。
 
    ```java
    	@Override
@@ -83,7 +83,7 @@ public final class CsrfFilter extends OncePerRequestFilter {
 
 ## 解决
 
-具体解决可以参考这个文档：https://docs.spring.io/spring-security/reference/servlet/exploits/csrf.html#csrf-integration-javascript，简单来说header传入的token使用`CsrfTokenRequestAttributeHandler` 处理即可。
+具体解决可以参考这个文档：[spring文档]( https://docs.spring.io/spring-security/reference/servlet/exploits/csrf.html#csrf-integration-javascript )，简单来说header传入的token使用`CsrfTokenRequestAttributeHandler` 处理即可。
 
 额外提一下，解决方法中`.csrfTokenRequestHandler(new SpaCsrfTokenRequestHandler())` 这里注册自定义handler实际上是替换掉了默认的`XorCsrfTokenRequestAttributeHandler` ，具体实现是在`CsrfConfigurer.configure(H http)` 。
 
