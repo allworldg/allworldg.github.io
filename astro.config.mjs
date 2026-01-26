@@ -18,5 +18,8 @@ export default defineConfig({
         shikiConfig: {
             theme: 'github-dark-default'
         }
+    },
+    devToolbar: {
+        enabled: false
     }
 });

@@ -1,10 +1,11 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
-import BlogPost from '../../layouts/BlogPost.astro';
+import Comment from '../../components/Comment.astro';
 import MetaHead from '../../components/MetaHead.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../constants';
 import Navbar from '../../components/Navbar.astro';
 import { DateFormat } from '../../utils';
+import Footer from '../../components/Footer.astro';
 
 export async function getStaticPaths() {
     const blogs = await getCollection('blog');
@@ -44,6 +45,8 @@ const { Content } = await render(blog);
                 <div class="app-prose mx-auto py-6 max-w-2xl text-justify overflow-auto">
                     <Content />
                 </div>
+                <Comment />
+                <Footer />
             </article>
         </main>
     </body>

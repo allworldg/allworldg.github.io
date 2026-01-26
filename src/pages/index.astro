@@ -36,7 +36,7 @@ const totalPage = Math.ceil(data.length / PAGE_SIZE);
                             <a class="text-base-green font-bold" href={BLOG_URL+"/"+blog.id}>{blog.data.title}</a>
                         </h2>
                         <p class="text-[#7f8c9b] font-merriweather text-xs mt-4 my-2">{blog.data.publishDate}</p>
-                        <div class="text-base-gray text-sm">{blog.data.excerpt}</div>
+                        <div class="text-base-gray text-sm wrap-break-word">{blog.data.excerpt}</div>
                     </article>
                 ))
             }
