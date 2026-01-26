@@ -18,10 +18,10 @@
 @layer base {
     .app-prose {
         h2 {
-            @apply text-black text-2xl my-5;
+            @apply text-black text-2xl my-5 font-bold;
         }
         h3 {
-            @apply text-black text-xl my-5;
+            @apply text-black text-xl my-5 font-bold;
         }
         a {
             @apply text-base-green;
