@@ -1,25 +1,10 @@
 ---
-import { type CollectionEntry, getCollection, render } from 'astro:content';
-import Comment from '../../components/Comment.astro';
-import MetaHead from '../../components/MetaHead.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../../constants';
-import Navbar from '../../components/Navbar.astro';
-import { DateFormat } from '../../utils';
-import Footer from '../../components/Footer.astro';
-
-
-export async function getStaticPaths() {
-    const blogs = await getCollection('blog');
-    return blogs.map((blog) => ({
-        params: { blog: blog.id },
-        props: blog
-    }));
-}
-type Props = CollectionEntry<'blog'>;
-
-const blog = Astro.props;
-const { title, excerpt, publishDate, updatedDate } = blog.data;
-const { Content } = await render(blog);
+import Footer from '../components/Footer.astro';
+import MetaHead from '../components/MetaHead.astro';
+import Navbar from '../components/Navbar.astro';
+import * as aboutContent from '../content/pages/about.md';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../constants';
+import { render } from 'astro:content';
 ---
 
 <!doctype html>
@@ -40,13 +25,10 @@ const { Content } = await render(blog);
                            bg-center
                            py-18"
                 >
-                    <h1 class="text-white text-3xl font-bold text-shadow-[0_0_40px_#34495e]">{title}</h1>
-                    <time class="mt-5 text-white font-merriweather text-sm">{DateFormat(publishDate)}</time>
                 </header>
                 <div class="app-prose mx-auto py-6 max-w-2xl overflow-auto text-justify hyphens-auto">
-                    <Content />
+                    <aboutContent.Content />
                 </div>
-                <Comment />
             </article>
         </main>
         <Footer />

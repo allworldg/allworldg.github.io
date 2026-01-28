@@ -5,12 +5,9 @@ import Navbar from '../components/Navbar.astro';
 import Pagination from '../components/pagination.astro';
 import { PAGE_SIZE, SITE_DESCRIPTION, SITE_TITLE, PAGE_URL, BLOG_URL } from '../constants';
 import { getCollection } from 'astro:content';
-// import { MarkdownHeading } from 'astro';
 
-
-
-const data = ( await getCollection('blog') ).sort((a,b)=>{
-  return b.data.publishDate.getTime()-a.data.publishDate.getTime()
+const data = (await getCollection('blog')).sort((a, b) => {
+    return b.data.publishDate.getTime() - a.data.publishDate.getTime();
 });
 const blogs = data.slice(0, 5);
 const hasNext = data.length > 5;
@@ -24,7 +21,7 @@ const totalPage = Math.ceil(data.length / PAGE_SIZE);
     </head>
     <body>
         <Navbar />
-        <main class="max-w-[780px] h-full mx-auto pt-14 ">
+        <main class="max-w-[780px] h-full mx-auto pt-14">
             <h2 class="text-center text-2xl">If today were the last day of my life</h2>
             <div class="mt-4">
                 <h3 class="font-bold">最近更新:</h3>
@@ -33,22 +30,16 @@ const totalPage = Math.ceil(data.length / PAGE_SIZE);
                 blogs.map((blog) => (
                     <article class="mt-8 pb-4">
                         <h2 class="text-lg">
-                            <a class="text-base-green font-bold" href={BLOG_URL+"/"+blog.id}>{blog.data.title}</a>
+                            <a class="text-base-green font-bold" href={BLOG_URL + '/' + blog.id}>
+                                {blog.data.title}
+                            </a>
                         </h2>
                         <p class="text-[#7f8c9b] font-merriweather text-xs mt-4 my-2">{blog.data.publishDate}</p>
                         <div class="text-base-gray text-sm wrap-break-word">{blog.data.excerpt}</div>
                     </article>
                 ))
             }
-            <Pagination
-                class="mt-10"
-                hasPrev={false}
-                hasNext={hasNext}
-                prevUrl=""
-                nextUrl={PAGE_URL + '/2'}
-                currentPage={1}
-                totalPage={totalPage}
-            />
+            <Pagination class="mt-10" hasPrev={false} hasNext={hasNext} prevUrl="" nextUrl={PAGE_URL + '/2'} currentPage={1} totalPage={totalPage} />
         </main>
         <Footer />
     </body>

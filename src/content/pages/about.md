@@ -7,4 +7,4 @@ seo:
 
 ## allworldg
 
-**Greetings!** I'm allworldg.
+堕落的懒癌患者，自救ing
