@@ -1,0 +1,20 @@
+---
+import Footer from '../components/Footer.astro';
+import MetaHead from '../components/MetaHead.astro';
+import Navbar from '../components/Navbar.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../constants';
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <MetaHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    </head>
+    <body>
+        <Navbar />
+        <main>
+            <slot />
+        </main>
+        <Footer />
+    </body>
+</html>
