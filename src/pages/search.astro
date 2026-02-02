@@ -1,10 +1,10 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SearchComponent from '../components/SearchComponent.vue';
+import { getCollection } from 'astro:content';
+const blogs = await getCollection('blog');
 ---
 
 <BaseLayout>
-hello
+    <SearchComponent blogs={blogs} client:load />
 </BaseLayout>
-
