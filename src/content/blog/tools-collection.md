@@ -35,6 +35,7 @@ tags:
   - chezmoi (用于备份同步config)
   - fzf (fuzzy finder)
   - uv (An extremely fast Python package and project manager, written in Rust.)
+  - mise (tool manager)
 - 备份工具
   - chezmoi (用于同步config)
 - 其他
