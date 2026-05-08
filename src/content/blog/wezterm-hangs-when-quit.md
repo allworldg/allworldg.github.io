@@ -1,4 +1,4 @@
-/---
+---
 title: Solve hang problem when wezterm quit
 excerpt: when I try to quit the wezterm, it will hang randomly. I just found a way which mentioned in github issue.
 publishDate: 2026-05-08T16:12:16+08:00
